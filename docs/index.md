@@ -1,23 +1,13 @@
 Git
 ===
 
+ - [Comandos](comandos.md)
+ - [Conceitos do git](conceitos.md)
+ - [Pra que git serve](pra-que-serve.md)
+ - [Historia](historia.md)
 
-Versionando
------------
+Outros recursos
+---------------
 
-Para inicializar um projeto git
-
-```
-git init $DIRETORIO
-
-```
-
-
-Para adicionar os arquivos criados no versionamento
-
-```
-git add $ARQUIVO|$DIRETORIO
-git commit
-```
-
+ - [Referência](https://git-scm.com/docs)
 
