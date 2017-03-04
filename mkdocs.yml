@@ -1,4 +1,4 @@
-site_name: Git Docs
+site_name: Git Documentation
 theme: mkdocs
 pages:
 - Git:
