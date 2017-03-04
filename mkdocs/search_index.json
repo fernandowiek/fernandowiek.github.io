@@ -1,0 +1,424 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Git \"the stupid content tracker\"\n\n\n\n\nPra que git serve?\n\n\nHistoria\n\n\nLista de comandos\n\n\nConceitos do git", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#git-the-stupid-content-tracker", 
+            "text": "Pra que git serve?  Historia  Lista de comandos  Conceitos do git", 
+            "title": "Git \"the stupid content tracker\""
+        }, 
+        {
+            "location": "/02_historia/", 
+            "text": "Motivo\n\n\nGit foi criado em 2005 por Linus Torvalds, o criador do Linux.\nA motiva\u00e7\u00e3o de criar o Git foi porqu\u00ea o CVS anterior (SVN) era\nmuito lento para comportar o trabalho do kernel.\n\n\nAlguns significados para o termo:\n - \"global information tracker\"\n - \"goddamn idiotic truckload of sh*t\"\n\n\nPontos-chave no design:\n\n\n\n\nVelocidade\n\n\nDesign Simples\n\n\nSuporte a desenvolvimento n\u00e3o-linear (branches)\n\n\nTotalmente distribu\u00eddo\n\n\nCapaz de lidar com projetos gigantes", 
+            "title": "Hist\u00f3ria"
+        }, 
+        {
+            "location": "/02_historia/#motivo", 
+            "text": "Git foi criado em 2005 por Linus Torvalds, o criador do Linux.\nA motiva\u00e7\u00e3o de criar o Git foi porqu\u00ea o CVS anterior (SVN) era\nmuito lento para comportar o trabalho do kernel.  Alguns significados para o termo:\n - \"global information tracker\"\n - \"goddamn idiotic truckload of sh*t\"", 
+            "title": "Motivo"
+        }, 
+        {
+            "location": "/02_historia/#pontos-chave-no-design", 
+            "text": "Velocidade  Design Simples  Suporte a desenvolvimento n\u00e3o-linear (branches)  Totalmente distribu\u00eddo  Capaz de lidar com projetos gigantes", 
+            "title": "Pontos-chave no design:"
+        }, 
+        {
+            "location": "/03_pra-que-serve/", 
+            "text": "Git serve para recuperar informa\u00e7\u00e3o\n\n\ngit log\nrm -rf docs\nbrowser http://localhost:8000\ngit reset --hard HEAD\nbrowser http://localhost:8000\n\n\n\n\n\nGit serve para versionar informa\u00e7\u00f5es\n\n\nCriando\n\n\necho \nHistoria do git\n \ndocs/historia.md\necho \n[Historia](historia.md)\n \ndocs/index.md\ngit add .\ngit commit  -m \nadicionado arquivos sobre historia\n\necho \nGit foi criado em 2005 por Linus Torvalds, o criador do Linux\n \ndocs/historia.md\ngit commit -a -m \ndetalhes sobre a historia\n\n\n\n\n\n\nDesfazendo\n\n\ngit checkout HEAD~1 docs/historia.md\ngit checkout HEAD docs/historia.md\n\n\n\n\nGit tamb\u00e9m serve para:\n\n\n\n\nTrabalhar em m\u00faltiplas tarefas concorrentemente\n\n\nTrabalhar com m\u00faltiplas equipes concorrentemente\n\n\nPode-se versionar todo tipo de informa\u00e7\u00e3o: projetos de software,\n  livros, tcc's, etc.", 
+            "title": "Pra que serve"
+        }, 
+        {
+            "location": "/03_pra-que-serve/#git-serve-para-recuperar-informacao", 
+            "text": "git log\nrm -rf docs\nbrowser http://localhost:8000\ngit reset --hard HEAD\nbrowser http://localhost:8000", 
+            "title": "Git serve para recuperar informa\u00e7\u00e3o"
+        }, 
+        {
+            "location": "/03_pra-que-serve/#git-serve-para-versionar-informacoes", 
+            "text": "", 
+            "title": "Git serve para versionar informa\u00e7\u00f5es"
+        }, 
+        {
+            "location": "/03_pra-que-serve/#criando", 
+            "text": "echo  Historia do git   docs/historia.md\necho  [Historia](historia.md)   docs/index.md\ngit add .\ngit commit  -m  adicionado arquivos sobre historia \necho  Git foi criado em 2005 por Linus Torvalds, o criador do Linux   docs/historia.md\ngit commit -a -m  detalhes sobre a historia", 
+            "title": "Criando"
+        }, 
+        {
+            "location": "/03_pra-que-serve/#desfazendo", 
+            "text": "git checkout HEAD~1 docs/historia.md\ngit checkout HEAD docs/historia.md  Git tamb\u00e9m serve para:   Trabalhar em m\u00faltiplas tarefas concorrentemente  Trabalhar com m\u00faltiplas equipes concorrentemente  Pode-se versionar todo tipo de informa\u00e7\u00e3o: projetos de software,\n  livros, tcc's, etc.", 
+            "title": "Desfazendo"
+        }, 
+        {
+            "location": "/04_conceitos/", 
+            "text": "Hist\u00f3rico em grafo\n\n\nOs commits no git s\u00e3o estruturados em forma de grafo\n\n\n\n\n\u00c1reas de armazemanto do git\n\n\nGit tem 3 \u00e1reas de armazenamento principais\n\n\n\n\nStaging (index)\n\n\nReposit\u00f3rio Local\n\n\nReposit\u00f3rio Remoto", 
+            "title": "Conceitos"
+        }, 
+        {
+            "location": "/04_conceitos/#historico-em-grafo", 
+            "text": "Os commits no git s\u00e3o estruturados em forma de grafo", 
+            "title": "Hist\u00f3rico em grafo"
+        }, 
+        {
+            "location": "/04_conceitos/#areas-de-armazemanto-do-git", 
+            "text": "Git tem 3 \u00e1reas de armazenamento principais   Staging (index)  Reposit\u00f3rio Local  Reposit\u00f3rio Remoto", 
+            "title": "\u00c1reas de armazemanto do git"
+        }, 
+        {
+            "location": "/05_comandos/", 
+            "text": "Lista de Comandos\n\n\nGit conta com v\u00e1rios comandos, a lista completa se encontra em\n/lib/git-core.\n\n\nPara mais detalhes do que como cada um opera pode utilizar\n\n\nman git commando\ngit commando --help\n\n\n\n\n\nComandos conhecidos\n\n\n\n\ngit init\n\n\ngit add\n\n\ngit commit\n\n\ngit format-patch\n\n\ngit apply\n\n\ngit show\n\n\ngit diff\n\n\ngit log\n\n\ngit push\n\n\ngit rebase\n\n\ngit checkout\n\n\ngit stash\n\n\ngit revert\n\n\ngit reset", 
+            "title": "Comandos"
+        }, 
+        {
+            "location": "/05_comandos/#lista-de-comandos", 
+            "text": "Git conta com v\u00e1rios comandos, a lista completa se encontra em\n/lib/git-core.  Para mais detalhes do que como cada um opera pode utilizar  man git commando\ngit commando --help", 
+            "title": "Lista de Comandos"
+        }, 
+        {
+            "location": "/05_comandos/#comandos-conhecidos", 
+            "text": "git init  git add  git commit  git format-patch  git apply  git show  git diff  git log  git push  git rebase  git checkout  git stash  git revert  git reset", 
+            "title": "Comandos conhecidos"
+        }, 
+        {
+            "location": "/06_inicializando-projeto/", 
+            "text": "Init\n\n\nPara inicializar um projeto git\n\n\nS\u00e3o criados arquivos na pasta .git com os\ndados versionados.\n\n\ngit init $DIRETORIO\n\n\n\n\n\nPara uma lista dos arquivos criados pelo git:\n\n\ncd /tmp\ngit init foo\nfind .\n\n\n\n\nConfig\n\n\ngit config --global user.name \nJohn Doe\n\ngit config --global user.email johndoe@example.com", 
+            "title": "Inicializando um projeto"
+        }, 
+        {
+            "location": "/06_inicializando-projeto/#init", 
+            "text": "Para inicializar um projeto git  S\u00e3o criados arquivos na pasta .git com os\ndados versionados.  git init $DIRETORIO  Para uma lista dos arquivos criados pelo git:  cd /tmp\ngit init foo\nfind .", 
+            "title": "Init"
+        }, 
+        {
+            "location": "/06_inicializando-projeto/#config", 
+            "text": "git config --global user.name  John Doe \ngit config --global user.email johndoe@example.com", 
+            "title": "Config"
+        }, 
+        {
+            "location": "/07_criando-historico/", 
+            "text": "Add\n\n\nGit add adiciona arquivos a uma \u00e1rea tempor\u00e1ria\npara compor um commit (staging).\n\n\ngit add $ARQUIVO|$DIRETORIO\n\n\n\n\nCommit\n\n\nCada mudan\u00e7a no hist\u00f3rico de um projeto \u00e9 representado por um\ncommit. \ngit show\n mostra o  \u00faltimo commit.\n\n\nPara uma lista completa dos commits use: \ngit log\n.\n\n\ngit commit\n\n\n\n\nO commit transfere as informa\u00e7\u00f5es para o reposit\u00f3rio local.\n\n\nBoas pr\u00e1ticas de nomenclatura de commits\nhttps://www.alexkras.com/19-git-tips-for-everyday-use/#good-commit-message\n\n\nStatus\n\n\ngit status\ngit status -s  #vers\u00e3o resumida", 
+            "title": "Criando Hist\u00f3rico"
+        }, 
+        {
+            "location": "/07_criando-historico/#add", 
+            "text": "Git add adiciona arquivos a uma \u00e1rea tempor\u00e1ria\npara compor um commit (staging).  git add $ARQUIVO|$DIRETORIO", 
+            "title": "Add"
+        }, 
+        {
+            "location": "/07_criando-historico/#commit", 
+            "text": "Cada mudan\u00e7a no hist\u00f3rico de um projeto \u00e9 representado por um\ncommit.  git show  mostra o  \u00faltimo commit.  Para uma lista completa dos commits use:  git log .  git commit  O commit transfere as informa\u00e7\u00f5es para o reposit\u00f3rio local.  Boas pr\u00e1ticas de nomenclatura de commits\nhttps://www.alexkras.com/19-git-tips-for-everyday-use/#good-commit-message", 
+            "title": "Commit"
+        }, 
+        {
+            "location": "/07_criando-historico/#status", 
+            "text": "git status\ngit status -s  #vers\u00e3o resumida", 
+            "title": "Status"
+        }, 
+        {
+            "location": "/08_patches/", 
+            "text": "Format patch\n\n\nPatches s\u00e3o mudan\u00e7as que podem ser transferidas de um reposit\u00f3rio\npara outro:\n\n\nPara criar um patch do \u00faltimo commit:\n\n\ngit format-patch master\n\n\n\n\n\nAppy\n\n\nPara aplicar um patch:\n\n\ncurl -L https://goo.gl/p1LEc7 -o 0001-historia.patch\ngit apply 0001-historia.patch\n\n\n\n\nDiff e show\n\n\nO resultado de \ngit show\n e \ngit diff\n tamb\u00e9m s\u00e3o comapat\u00edveis com \npatches do git.\n\n\ngit diff \n my_patch.patch\ngit show \n my_patch.patch\ngit diff --cached \n my_patch.patch", 
+            "title": "Patches"
+        }, 
+        {
+            "location": "/08_patches/#format-patch", 
+            "text": "Patches s\u00e3o mudan\u00e7as que podem ser transferidas de um reposit\u00f3rio\npara outro:  Para criar um patch do \u00faltimo commit:  git format-patch master", 
+            "title": "Format patch"
+        }, 
+        {
+            "location": "/08_patches/#appy", 
+            "text": "Para aplicar um patch:  curl -L https://goo.gl/p1LEc7 -o 0001-historia.patch\ngit apply 0001-historia.patch", 
+            "title": "Appy"
+        }, 
+        {
+            "location": "/08_patches/#diff-e-show", 
+            "text": "O resultado de  git show  e  git diff  tamb\u00e9m s\u00e3o comapat\u00edveis com \npatches do git.  git diff   my_patch.patch\ngit show   my_patch.patch\ngit diff --cached   my_patch.patch", 
+            "title": "Diff e show"
+        }, 
+        {
+            "location": "/09_branches/", 
+            "text": "Uma branch \u00e9 uma linha de trabalho independente. Podem ser usadas para\ndiversos prop\u00f3sitos.\n\n\nPode-se ter uma branch para:\n\n\n\n\nexperimentar uma tecnologia nova;\n\n\numa branch para um bug-fix;\n\n\noutra para o trabalho do sprint;\n\n\n\n\nA branch padr\u00e3o no git \u00e9 a \nmaster\n. Para listar todas as branches\nuse: \ngit branch\n\n\ngit commit \ninforma\u00e7\u00f5es sobre branches no master\n\ngit checkout -b \nrecursos_adicionais\n #cria outra linha de trabalho\ncurl -L https://goo.gl/XlMc3m -o 0001-recursos_adicionais.patch\ngit apply 0001-recursos_adicionais.patch\n\n\n\n\nO comando checkout serve para criar a branch e entrar nela.\n\n\nMerge\n\n\nMerge mescla o conte\u00fado de branches\n\n\ngit commit -m \nmais modifica\u00e7\u00f5es\n\ngit merge recursos_adicionais\ngit log\n\n\n\n\nFluxos de trabalho\n\n\nExistem v\u00e1rios fluxos de trabalho de branches.\n\n\n\n\nGithubflow\n\n\ngit flow\n\n\nbranch por t\u00f3pico\n\n\n\n\nMais sobre fluxos de trabalho\n\n\n\n\nhttps://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows#_distributed_git\n\n\nhttps://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows", 
+            "title": "Branches"
+        }, 
+        {
+            "location": "/09_branches/#merge", 
+            "text": "Merge mescla o conte\u00fado de branches  git commit -m  mais modifica\u00e7\u00f5es \ngit merge recursos_adicionais\ngit log", 
+            "title": "Merge"
+        }, 
+        {
+            "location": "/09_branches/#fluxos-de-trabalho", 
+            "text": "Existem v\u00e1rios fluxos de trabalho de branches.   Githubflow  git flow  branch por t\u00f3pico   Mais sobre fluxos de trabalho   https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows#_distributed_git  https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows", 
+            "title": "Fluxos de trabalho"
+        }, 
+        {
+            "location": "/10_merges/", 
+            "text": "Fast-forward: move o ponteiro da master para o \u00faltimo commit da\nbranch.\n\n\ngit merge --fast-forward\n\n\n\n\n\nResolvendo com nossas altera\u00e7\u00f5es\n\n\ngit pull origin master -X ours", 
+            "title": "Merges"
+        }, 
+        {
+            "location": "/10_merges/#resolvendo-com-nossas-alteracoes", 
+            "text": "git pull origin master -X ours", 
+            "title": "Resolvendo com nossas altera\u00e7\u00f5es"
+        }, 
+        {
+            "location": "/11_desfazendo/", 
+            "text": "O que ainda n\u00e3o est\u00e1 comitado\n\n\ngit reset --hard HEAD\n\n\n\n\n\nRemover arquivos criados mas n\u00e3o versionados\n\n\ngit ls-files --others --exclude-standard | xargs rm\n\n\n\n\n\nRemover do staging\n\n\ngit reset HEAD $FILE\n\n\n\n\n\nRevert\n\n\nDesfaz um commit criando um novo commit. Recomendado em branches\np\u00fablicas onde o hist\u00f3rico n\u00e3o pode ser reescrito.\n\n\ngit checkout hotfix\ngit revert HEAD~2\n\n\n\n\n\nTrocar a \u00faltima mensagem de commit\n\n\ngit commit --amend\n\n\n\n\n\nDesfazendo \u00faltimos 3 commits - sem desfazer o c\u00f3digo\n\n\ngit reset --soft HEAD~3\n\n\n\n\n\nDesfazendo \u00faltimos 3 commits - desfazendo o c\u00f3digo\n\n\ngit reset --hard HEAD~3", 
+            "title": "Desfazendo"
+        }, 
+        {
+            "location": "/11_desfazendo/#o-que-ainda-nao-esta-comitado", 
+            "text": "git reset --hard HEAD", 
+            "title": "O que ainda n\u00e3o est\u00e1 comitado"
+        }, 
+        {
+            "location": "/11_desfazendo/#remover-arquivos-criados-mas-nao-versionados", 
+            "text": "git ls-files --others --exclude-standard | xargs rm", 
+            "title": "Remover arquivos criados mas n\u00e3o versionados"
+        }, 
+        {
+            "location": "/11_desfazendo/#remover-do-staging", 
+            "text": "git reset HEAD $FILE", 
+            "title": "Remover do staging"
+        }, 
+        {
+            "location": "/11_desfazendo/#revert", 
+            "text": "Desfaz um commit criando um novo commit. Recomendado em branches\np\u00fablicas onde o hist\u00f3rico n\u00e3o pode ser reescrito.  git checkout hotfix\ngit revert HEAD~2", 
+            "title": "Revert"
+        }, 
+        {
+            "location": "/11_desfazendo/#trocar-a-ultima-mensagem-de-commit", 
+            "text": "git commit --amend", 
+            "title": "Trocar a \u00faltima mensagem de commit"
+        }, 
+        {
+            "location": "/11_desfazendo/#desfazendo-ultimos-3-commits-sem-desfazer-o-codigo", 
+            "text": "git reset --soft HEAD~3", 
+            "title": "Desfazendo \u00faltimos 3 commits - sem desfazer o c\u00f3digo"
+        }, 
+        {
+            "location": "/11_desfazendo/#desfazendo-ultimos-3-commits-desfazendo-o-codigo", 
+            "text": "git reset --hard HEAD~3", 
+            "title": "Desfazendo \u00faltimos 3 commits - desfazendo o c\u00f3digo"
+        }, 
+        {
+            "location": "/12_reescrevendo-historico/", 
+            "text": "Rebase\n\n\ngit rebase master\n\n\n\n\n\nA regra de ouro do rebase\n\n\nhttps://www.atlassian.com/git/tutorials/merging-vs-rebasing?section=the-golden-rule-of-rebasing\n\n\nSquash\n\n\ngit rebase -i\n\n\n\n\n\nOu\n\n\ngit merge --squash feature_branch\n\n\n\n\n\nEditar um commit anterior\n\n\n\n\nRebase no commit e marcar ele como editado\n\n\nComitar as altera\u00e7\u00f5es\n\n\nFazer um fix up no commit com seu pai\n\n\n\n\ngit rebase -i HEAD~3", 
+            "title": "Reescrevendo Hist\u00f3rico"
+        }, 
+        {
+            "location": "/12_reescrevendo-historico/#rebase", 
+            "text": "git rebase master", 
+            "title": "Rebase"
+        }, 
+        {
+            "location": "/12_reescrevendo-historico/#a-regra-de-ouro-do-rebase", 
+            "text": "https://www.atlassian.com/git/tutorials/merging-vs-rebasing?section=the-golden-rule-of-rebasing", 
+            "title": "A regra de ouro do rebase"
+        }, 
+        {
+            "location": "/12_reescrevendo-historico/#squash", 
+            "text": "git rebase -i  Ou  git merge --squash feature_branch", 
+            "title": "Squash"
+        }, 
+        {
+            "location": "/12_reescrevendo-historico/#editar-um-commit-anterior", 
+            "text": "Rebase no commit e marcar ele como editado  Comitar as altera\u00e7\u00f5es  Fazer um fix up no commit com seu pai   git rebase -i HEAD~3", 
+            "title": "Editar um commit anterior"
+        }, 
+        {
+            "location": "/13_remotos/", 
+            "text": "Git \u00e9 distriu\u00eddo.\n\n\nRemoto no filesystem local\n\n\ncd /path/to/git-docs\ncd ..\ngit clone git-docs other-git-docs\ncd other-git-docs\ngit config user.name \nother user\n\ngit config user.email other.user@gmail.com\n\n\n//do some work\ncd ../git-docs\ngit remote add other ../other-git-docs\ngit merge other/master\n\n\n\n\nRemoto online\n\n\nListar os reposit\u00f3rios remotos\n\n\ngit remote -v\n\n\n\n\n\nGit remote add origin\n\n\ngit remote add origin git@github.com:compufour/compufacil.git\ngit remote add origin https://github.com/user/repo.git\n\n\n\n\nMandar para o reposit\u00f3rio\n\n\ngit clone https://github.com/JeanCarloMachado/git-docs\ngit push origin new_branch\n\n\n\n\nBaixar do reposit\u00f3rio\n\n\ngit pull --rebase", 
+            "title": "Remotos"
+        }, 
+        {
+            "location": "/13_remotos/#remoto-no-filesystem-local", 
+            "text": "cd /path/to/git-docs\ncd ..\ngit clone git-docs other-git-docs\ncd other-git-docs\ngit config user.name  other user \ngit config user.email other.user@gmail.com\n\n\n//do some work\ncd ../git-docs\ngit remote add other ../other-git-docs\ngit merge other/master", 
+            "title": "Remoto no filesystem local"
+        }, 
+        {
+            "location": "/13_remotos/#remoto-online", 
+            "text": "", 
+            "title": "Remoto online"
+        }, 
+        {
+            "location": "/13_remotos/#listar-os-repositorios-remotos", 
+            "text": "git remote -v", 
+            "title": "Listar os reposit\u00f3rios remotos"
+        }, 
+        {
+            "location": "/13_remotos/#git-remote-add-origin", 
+            "text": "git remote add origin git@github.com:compufour/compufacil.git\ngit remote add origin https://github.com/user/repo.git", 
+            "title": "Git remote add origin"
+        }, 
+        {
+            "location": "/13_remotos/#mandar-para-o-repositorio", 
+            "text": "git clone https://github.com/JeanCarloMachado/git-docs\ngit push origin new_branch", 
+            "title": "Mandar para o reposit\u00f3rio"
+        }, 
+        {
+            "location": "/13_remotos/#baixar-do-repositorio", 
+            "text": "git pull --rebase", 
+            "title": "Baixar do reposit\u00f3rio"
+        }, 
+        {
+            "location": "/14_Github/", 
+            "text": "GitHub \u00e9 uma rede social.\n\n\nPermite\n\n\n\n\nCriar reposit\u00f3rios\n\n\nColaborar para reposit\u00f3rios existentes:\n\n\nCriando issues\n\n\nSubmitando pull requests\n\n\n\n\n\n\n\n\nOutros Servi\u00e7os\n\n\nGithubio Pages\n\n\nHospedar um site com seu usu\u00e1rio.\n\n\nGists\n\n\nTipo pastebin", 
+            "title": "Github"
+        }, 
+        {
+            "location": "/14_Github/#permite", 
+            "text": "Criar reposit\u00f3rios  Colaborar para reposit\u00f3rios existentes:  Criando issues  Submitando pull requests", 
+            "title": "Permite"
+        }, 
+        {
+            "location": "/14_Github/#outros-servicos", 
+            "text": "", 
+            "title": "Outros Servi\u00e7os"
+        }, 
+        {
+            "location": "/14_Github/#githubio-pages", 
+            "text": "Hospedar um site com seu usu\u00e1rio.", 
+            "title": "Githubio Pages"
+        }, 
+        {
+            "location": "/14_Github/#gists", 
+            "text": "Tipo pastebin", 
+            "title": "Gists"
+        }, 
+        {
+            "location": "/15_ferramentas-auxiliares-e-produtividade/", 
+            "text": "Stash\n\n\nPara salvar trabalhos tempor\u00e1rios\n\n\ngit stash\ngit stash apply\n\n\n\n\n\nGitk\n\n\nUma interface nativa para quem gosta de interfaces gr\u00e1ficas\n\n\nAliases\n\n\ngit config --global alias.co checkout\n\n\n\n\n\nBash aliases\n\n\nalias g=git\n\n\n\n\n\nLFS\n\n\nExtens\u00e3o para trabalhar com arquivos grandes\n\n\nGitignore\n\n\n.gitignore \u00e9 uma lista de arquivos bloqueados do versionamento\n\n\nHooks\n\n\nCom hooks \u00e9 poss\u00edvel rodar comandos quando eventos ocorrem no git.\n\n\nTags\n\n\nPermite marcar pontos espec\u00edficos no hist\u00f3rico adicionando\nsem\u00e2ntica.\n\n\ngit tag -a \nv1.0", 
+            "title": "Ferramentas Auxiliares"
+        }, 
+        {
+            "location": "/15_ferramentas-auxiliares-e-produtividade/#stash", 
+            "text": "Para salvar trabalhos tempor\u00e1rios  git stash\ngit stash apply", 
+            "title": "Stash"
+        }, 
+        {
+            "location": "/15_ferramentas-auxiliares-e-produtividade/#gitk", 
+            "text": "Uma interface nativa para quem gosta de interfaces gr\u00e1ficas", 
+            "title": "Gitk"
+        }, 
+        {
+            "location": "/15_ferramentas-auxiliares-e-produtividade/#aliases", 
+            "text": "git config --global alias.co checkout", 
+            "title": "Aliases"
+        }, 
+        {
+            "location": "/15_ferramentas-auxiliares-e-produtividade/#bash-aliases", 
+            "text": "alias g=git", 
+            "title": "Bash aliases"
+        }, 
+        {
+            "location": "/15_ferramentas-auxiliares-e-produtividade/#lfs", 
+            "text": "Extens\u00e3o para trabalhar com arquivos grandes", 
+            "title": "LFS"
+        }, 
+        {
+            "location": "/15_ferramentas-auxiliares-e-produtividade/#gitignore", 
+            "text": ".gitignore \u00e9 uma lista de arquivos bloqueados do versionamento", 
+            "title": "Gitignore"
+        }, 
+        {
+            "location": "/15_ferramentas-auxiliares-e-produtividade/#hooks", 
+            "text": "Com hooks \u00e9 poss\u00edvel rodar comandos quando eventos ocorrem no git.", 
+            "title": "Hooks"
+        }, 
+        {
+            "location": "/15_ferramentas-auxiliares-e-produtividade/#tags", 
+            "text": "Permite marcar pontos espec\u00edficos no hist\u00f3rico adicionando\nsem\u00e2ntica.  git tag -a  v1.0", 
+            "title": "Tags"
+        }, 
+        {
+            "location": "/16_recursos_adicionais/", 
+            "text": "Links\n\n\n\n\nRefer\u00eancia oficial\n\n\nMelhor tutorial de Git\n\n\nEncontrando issues no gitub\n\n\n\n\nLivros\n\n\n\n\nGit Pro (o melhor)\n\n\nGit - Pragmatic bookshelf", 
+            "title": "Recursos Adicionais"
+        }, 
+        {
+            "location": "/16_recursos_adicionais/#links", 
+            "text": "Refer\u00eancia oficial  Melhor tutorial de Git  Encontrando issues no gitub", 
+            "title": "Links"
+        }, 
+        {
+            "location": "/16_recursos_adicionais/#livros", 
+            "text": "Git Pro (o melhor)  Git - Pragmatic bookshelf", 
+            "title": "Livros"
+        }, 
+        {
+            "location": "/17_avancado/", 
+            "text": "Debug\n\n\nBisect\n\n\nBlame\n\n\nManuten\u00e7\u00e3o\n\n\nTrabalhando com hist\u00f3rico grande\n\n\nDeletando arquivos do hist\u00f3rico\n\n\nReflog\n\n\nIntegrando ferramentas ao github\n\n\nEstudando fluxos de projetos open-source\n\n\nCriando um server remoto\n\n\nVariaveis internas do Git\n\n\nPumbling\n\n\ngit cat-file\n\n\nComitando (hardcore version)\n\n\nCriando um objeto manualmente", 
+            "title": "Indice"
+        }, 
+        {
+            "location": "/17_avancado/#debug", 
+            "text": "", 
+            "title": "Debug"
+        }, 
+        {
+            "location": "/17_avancado/#bisect", 
+            "text": "", 
+            "title": "Bisect"
+        }, 
+        {
+            "location": "/17_avancado/#blame", 
+            "text": "", 
+            "title": "Blame"
+        }, 
+        {
+            "location": "/17_avancado/#manutencao", 
+            "text": "", 
+            "title": "Manuten\u00e7\u00e3o"
+        }, 
+        {
+            "location": "/17_avancado/#trabalhando-com-historico-grande", 
+            "text": "", 
+            "title": "Trabalhando com hist\u00f3rico grande"
+        }, 
+        {
+            "location": "/17_avancado/#deletando-arquivos-do-historico", 
+            "text": "", 
+            "title": "Deletando arquivos do hist\u00f3rico"
+        }, 
+        {
+            "location": "/17_avancado/#reflog", 
+            "text": "", 
+            "title": "Reflog"
+        }, 
+        {
+            "location": "/17_avancado/#integrando-ferramentas-ao-github", 
+            "text": "", 
+            "title": "Integrando ferramentas ao github"
+        }, 
+        {
+            "location": "/17_avancado/#estudando-fluxos-de-projetos-open-source", 
+            "text": "", 
+            "title": "Estudando fluxos de projetos open-source"
+        }, 
+        {
+            "location": "/17_avancado/#criando-um-server-remoto", 
+            "text": "", 
+            "title": "Criando um server remoto"
+        }, 
+        {
+            "location": "/17_avancado/#variaveis-internas-do-git", 
+            "text": "", 
+            "title": "Variaveis internas do Git"
+        }, 
+        {
+            "location": "/17_avancado/#pumbling", 
+            "text": "git cat-file", 
+            "title": "Pumbling"
+        }, 
+        {
+            "location": "/17_avancado/#comitando-hardcore-version", 
+            "text": "", 
+            "title": "Comitando (hardcore version)"
+        }, 
+        {
+            "location": "/17_avancado/#criando-um-objeto-manualmente", 
+            "text": "", 
+            "title": "Criando um objeto manualmente"
+        }
+    ]
+}
